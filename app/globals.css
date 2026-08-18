@@ -120,9 +120,40 @@ nav a:hover { color: var(--starlight); }
 }
 .hero-visual {
   position: absolute;
-  inset: 0 0 0 auto;
-  width: min(58vw, 865px);
-  background: url("/hero-visual.jpg") right center / 200% auto no-repeat;
+  inset: 0;
+  width: 100%;
+  background:
+    radial-gradient(circle at 82% 44%, rgba(142,172,255,.9) 0 1px, rgba(142,172,255,.2) 2px, transparent 8px),
+    radial-gradient(circle at 74% 31%, rgba(240,244,251,.88) 0 .8px, transparent 1.6px),
+    radial-gradient(circle at 91% 22%, rgba(184,116,82,.8) 0 .8px, transparent 1.7px),
+    radial-gradient(circle at 66% 69%, rgba(240,244,251,.72) 0 .7px, transparent 1.5px),
+    radial-gradient(circle at 88% 77%, rgba(142,172,255,.78) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 82% 48%, rgba(77,101,164,.18), transparent 31%);
+}
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  right: -170px;
+  bottom: -360px;
+  width: 810px;
+  height: 810px;
+  border: 1px solid rgba(142,172,255,.14);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 64px rgba(142,172,255,.025),
+    0 0 0 170px rgba(184,116,82,.022),
+    inset 0 0 90px rgba(142,172,255,.035);
+}
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  right: 22%;
+  top: 27%;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #e6d2c1 0 3%, #8f654f 18%, #151927 56%, transparent 59%);
+  box-shadow: -7px -2px 17px rgba(184,116,82,.2);
 }
 .hero-grain {
   position: absolute;
@@ -458,7 +489,9 @@ nav a:hover { color: var(--starlight); }
   .hero-bottom { display: block; margin-top: 64px; }
   .hero-bottom p { font-size: 15px; }
   .text-link { display: inline-block; margin-top: 27px; }
-  .hero-visual { inset: 112px -24px 0 auto; width: 112vw; opacity: .94; background-size: 200% auto; background-position: right center; }
+  .hero-visual { inset: 0; width: 100%; opacity: .96; }
+  .hero-visual::before { right: -430px; bottom: -270px; width: 720px; height: 720px; }
+  .hero-visual::after { right: 13%; top: 24%; width: 27px; height: 27px; }
   .hero-sky::before { background: linear-gradient(180deg, #05070d 0%, rgba(5,7,13,.86) 22%, rgba(5,7,13,.18) 52%, rgba(5,7,13,.92) 100%); }
   .sky-note { display: none; }
   .manifesto { grid-template-columns: 1fr; gap: 34px; padding-top: 90px; padding-bottom: 94px; }
