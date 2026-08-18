@@ -45,6 +45,14 @@ export default function CrossCulturalUnderstanding() {
       <ArticleHeader />
 
       <header className="article-hero shell">
+        <div className="article-cover-art" aria-hidden="true">
+          <div className="article-cover-poster" />
+          <div className="culture-field culture-field-a" />
+          <div className="culture-field culture-field-b" />
+          <div className="culture-bridge" />
+          <span className="field-coordinate field-coordinate-a">SOURCE / 31°N</span>
+          <span className="field-coordinate field-coordinate-b">FIELD MAP / 001</span>
+        </div>
         <p className="article-kicker">FIELD NOTE 01 · AUGUST 18, 2026</p>
         <h1>Cross-Cultural Understanding Is Not Magic — It&apos;s Science</h1>
         <p className="article-deck">{description}</p>

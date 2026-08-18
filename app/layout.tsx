@@ -9,7 +9,7 @@ const serif = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://luyas-thinking-log.leahwang021.chatgpt.site"),
+  metadataBase: new URL("https://leahw-2077.github.io"),
   title: {
     default: "Leah — Founder, Builder, Story Hunter",
     template: "%s — Leah’s Field Log",
