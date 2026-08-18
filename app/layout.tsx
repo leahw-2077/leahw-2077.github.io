@@ -11,19 +11,19 @@ const serif = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL("https://luyas-thinking-log.leahwang021.chatgpt.site"),
   title: {
-    default: "Leah Wang — Founder, Product Builder, Writer",
-    template: "%s — Leah’s Log",
+    default: "Leah — Founder, Builder, Story Hunter",
+    template: "%s — Leah’s Field Log",
   },
-  description: "Leah writes about consumer AI, global products, startups, and life beyond the screen.",
+  description: "A field log from Leah: founder, consumer AI builder, science-fiction devotee, and collector of stories from the edge of the known.",
   openGraph: {
-    title: "Leah Wang",
-    description: "Founder · Product Builder · Perpetually Curious",
+    title: "Leah — Building Tomorrow. Chasing Wonder.",
+    description: "Founder · Builder · Story Hunter · Earthling, for now.",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leah Wang",
-    description: "Founder · Product Builder · Perpetually Curious",
+    title: "Leah — Building Tomorrow. Chasing Wonder.",
+    description: "Founder · Builder · Story Hunter · Earthling, for now.",
     images: ["/og.png"],
   },
 };

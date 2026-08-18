@@ -1,15 +1,13 @@
 const site = {
   name: "Leah",
-  mark: "L/",
   email: "leah@machinepulse.ai",
   linkedin: "https://linkedin.com/in/leah-wang-8676903a8",
-  intro:
-    "Founder of MachinePulse. Building Karpo and other consumer AI products where frontier models, product instinct, and real life collide.",
+  machinepulse: "https://www.machinepulse.ai/",
 };
 
 const posts = [
   {
-    label: "FIELD NOTE 01",
+    label: "TRANSMISSION 001",
     title: "Cross-Cultural Understanding Is Not Magic — It’s Science",
     summary:
       "Cultural fluency is not an innate gift. It is a disciplined practice of immersion, annotation, and learning from mistakes.",
@@ -22,35 +20,47 @@ const posts = [
 const projects = [
   {
     number: "01",
+    name: "MachinePulse",
+    description:
+      "A company exploring how frontier intelligence can become part of a more vivid, connected human life.",
+    status: "In orbit",
+  },
+  {
+    number: "02",
     name: "Karpo",
     description:
-      "A proactive AI assistant for discovering places, experiencing cities, and connecting with friends—MachinePulse’s first consumer product.",
+      "A proactive AI companion for discovering places, experiencing cities, and finding the people worth sharing them with.",
     status: "Building",
   },
   {
-    number: "02",
+    number: "03",
     name: "Field Notes",
     description:
-      "Writing from the edge of model strategy, consumer behavior, and the beautifully messy work of building a company from zero.",
-    status: "Writing",
+      "Stories from the frontier of models, culture, consumer behavior, and the beautifully strange work of starting from zero.",
+    status: "Transmitting",
   },
 ];
 
-const offScreen = [
+const constellations = [
   {
-    number: "01",
-    title: "Rock music",
-    line: "Loud guitars, long tracks, and Pink Floyd forever in rotation.",
+    number: "A",
+    title: "Science fiction & stories",
+    line: "Other worlds are often the best instruments for seeing this one clearly.",
   },
   {
-    number: "02",
+    number: "B",
+    title: "Rock & roll",
+    line: "Loud guitars, long tracks, and Pink Floyd forever somewhere in the signal.",
+  },
+  {
+    number: "C",
     title: "Long trails",
-    line: "Long days, open horizons, and the kind of silence you have to walk for.",
+    line: "Open horizons, earned silence, and the smallness that makes everything feel possible again.",
   },
   {
-    number: "03",
+    number: "D",
     title: "Photography",
-    line: "Light, texture, and the discipline of actually paying attention.",
+    line: "A practice of light, texture, memory—and actually paying attention.",
   },
 ];
 
@@ -60,47 +70,78 @@ function Arrow() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="cosmic-site">
       <header className="site-header shell">
         <a className="brand" href="#top" aria-label={`${site.name} home`}>
-          <span className="brand-mark">{site.mark}</span>
-          <span>{site.name}&apos;s Log</span>
+          <span className="brand-mark">L</span>
+          <span>MACHINEPULSE / FOUNDER&apos;S LOG</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#writing">Notes</a>
           <a href="#projects">Building</a>
-          <a href="#off-screen">Off-screen</a>
+          <a href="#off-screen">Elsewhere</a>
           <a href="#about">About</a>
         </nav>
       </header>
 
       <section className="hero shell" id="top">
-        <div className="eyebrow">
-          <span /> FOUNDER · PRODUCT BUILDER · PERPETUALLY CURIOUS
+        <div className="hero-sky" aria-hidden="true">
+          <div className="hero-visual" />
+          <div className="hero-grain" />
+          <span className="sky-note sky-note-one">UNMAPPED / 31°N</span>
+          <span className="sky-note sky-note-two">KEEP GOING →</span>
         </div>
-        <h1>
-          Build the future.<br />
-          <em>Live a little louder.</em>
-        </h1>
+
+        <div className="eyebrow"><span /> LEAH WANG · PERSONAL TRANSMISSION</div>
+        <div className="hero-title">
+          <p>Founder · Builder · Story hunter</p>
+          <h1>
+            <span>Building tomorrow.</span>
+            <em>Chasing wonder.</em>
+          </h1>
+        </div>
         <div className="hero-bottom">
-          <p>{site.intro}</p>
-          <a className="text-link" href="#writing">
-            Follow the signal <span aria-hidden="true">↓</span>
+          <p>
+            I&apos;m Leah, founder of MachinePulse. I build consumer AI, follow
+            strange ideas past the obvious, and stay close to whatever makes
+            humans feel more alive.
+          </p>
+          <a className="text-link" href="#manifesto">
+            Enter the log <span aria-hidden="true">↓</span>
           </a>
+        </div>
+      </section>
+
+      <section className="manifesto shell" id="manifesto">
+        <div className="manifesto-index" aria-hidden="true">
+          <span>LOG 00</span>
+          <span>THE WHY</span>
+        </div>
+        <blockquote>
+          “I&apos;ve never been interested in a future without <em>soul</em>.”
+        </blockquote>
+        <div className="manifesto-copy">
+          <p>
+            Technology should make the world feel larger—not flatten it. The
+            products worth building should carry curiosity, courage, and a
+            little bit of magic.
+          </p>
+          <p className="small-caps">THIS IS A RECORD OF THE EXPEDITION.</p>
         </div>
       </section>
 
       <section className="writing shell" id="writing">
         <div className="section-heading">
-          <p className="section-label">01 / Field Notes</p>
-          <h2>Ideas in motion</h2>
-          <p>Notes on building, models, people, and everything between.</p>
+          <p className="section-label">01 / Transmissions</p>
+          <h2>Signals from<br /><em>the frontier.</em></h2>
+          <p>Notes on intelligence, culture, people, and making the unfamiliar real.</p>
         </div>
 
         <a className="featured-post featured-link" href={posts[0].href}>
           <div className="featured-meta">
-            <span className="badge">New</span>
+            <span className="signal-dot" />
             <span>{posts[0].label}</span>
+            <span>18 · 08 · 26</span>
           </div>
           <div className="featured-content">
             <h3>{posts[0].title}</h3>
@@ -115,13 +156,13 @@ export default function Home() {
           <span className="post-arrow" aria-hidden="true">↗</span>
         </a>
 
-        <p className="archive-note">The first signal. More soon.</p>
+        <p className="archive-note">The first signal has left Earth. More soon.</p>
       </section>
 
       <section className="projects shell" id="projects">
         <div className="section-heading inverse">
-          <p className="section-label">02 / Building</p>
-          <h2>Things with a pulse</h2>
+          <p className="section-label">02 / The Expedition</p>
+          <h2>Things with<br /><em>a pulse.</em></h2>
           <p>Turning frontier technology into products people can actually feel.</p>
         </div>
         <div className="project-grid">
@@ -131,8 +172,10 @@ export default function Home() {
                 <span>{project.number}</span>
                 <span className="project-status">{project.status}</span>
               </div>
-              <h3>{project.name}</h3>
-              <p>{project.description}</p>
+              <div className="project-copy">
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+              </div>
               <span className="project-arrow"><Arrow /></span>
             </article>
           ))}
@@ -141,12 +184,15 @@ export default function Home() {
 
       <section className="off-screen shell" id="off-screen">
         <div className="off-screen-intro">
-          <p className="section-label">03 / Beyond the Product</p>
-          <h2>Off-screen,<br /><em>life gets louder.</em></h2>
+          <p className="section-label">03 / The Inner Constellation</p>
+          <h2>Beyond the product,<br /><em>the universe expands.</em></h2>
+          <p>Everything that keeps the machinery human.</p>
         </div>
-        <div className="off-screen-list">
-          {offScreen.map((item) => (
-            <article className="off-screen-row" key={item.title}>
+        <div className="constellation-map">
+          <div className="constellation-line" aria-hidden="true" />
+          {constellations.map((item) => (
+            <article className="constellation-card" key={item.title}>
+              <div className="constellation-star" aria-hidden="true" />
               <span>{item.number}</span>
               <h3>{item.title}</h3>
               <p>{item.line}</p>
@@ -157,39 +203,46 @@ export default function Home() {
 
       <section className="about shell" id="about">
         <div>
-          <p className="section-label">04 / About</p>
-          <h2>Hi, I&apos;m {site.name}.</h2>
+          <p className="section-label">04 / Origin Story</p>
+          <h2>Founder. Builder.<br /><em>Earthling, for now.</em></h2>
         </div>
         <div className="about-copy">
+          <p className="about-lede">
+            I&apos;m driven by starfields, exceptional human art, and the belief
+            that creation is one of our best forms of adventure.
+          </p>
           <p>
             I&apos;m the founder and CEO of MachinePulse, building Karpo—a proactive
-            AI assistant for real-world experiences. Before that, I worked across
-            model strategy and consumer products at ByteDance / Doubao and
-            Kuaishou.
+            AI companion for real-world experiences. Before that, I worked
+            across model strategy and consumer products at ByteDance / Doubao
+            and Kuaishou.
           </p>
           <p>
-            I like taking frontier technology out of the lab and turning it into
-            something people can actually use, love, and miss when it&apos;s gone.
-            Outside product, you&apos;ll find me somewhere between a rock show, a
-            long trail, and the next frame.
+            I like taking frontier technology out of the lab and giving it a
+            human heartbeat. When I&apos;m not building, I&apos;m probably inside a
+            story, at a rock show, on a long trail, or chasing the next frame.
           </p>
           <div className="contact-links">
+            <a className="button" href={site.machinepulse} target="_blank" rel="noreferrer">
+              MachinePulse <Arrow />
+            </a>
             <a className="button" href={site.linkedin} target="_blank" rel="noreferrer">
               LinkedIn <Arrow />
             </a>
             <a className="button button-outline" href={`mailto:${site.email}`}>
-              Say hello <Arrow />
+              Send a signal <Arrow />
             </a>
           </div>
         </div>
       </section>
 
       <footer className="footer shell">
-        <div className="footer-title">Stay curious. Stay loud.</div>
+        <div className="footer-kicker">END OF CURRENT TRANSMISSION</div>
+        <div className="footer-title">The universe is unfinished.<br /><em>Good.</em></div>
         <div className="footer-bottom">
           <span>© 2026 {site.name}</span>
           <span>Shanghai · Singapore · New York</span>
-          <a href="#top">Back to top ↑</a>
+          <a href="#top">Return to orbit ↑</a>
         </div>
       </footer>
     </main>

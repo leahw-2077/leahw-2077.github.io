@@ -19,14 +19,16 @@ test("server-renders the finished blog", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Leah Wang — Founder, Product Builder, Writer<\/title>/i);
-  assert.match(html, /Build the future/);
-  assert.match(html, /Ideas in motion/);
+  assert.match(html, /<title>Leah — Founder, Builder, Story Hunter<\/title>/i);
+  assert.match(html, /Building tomorrow/);
+  assert.match(html, /Chasing wonder/);
+  assert.match(html, /MACHINEPULSE \/ FOUNDER/);
   assert.match(html, /Cross-Cultural Understanding Is Not Magic/);
   assert.match(html, /href="\/notes\/cross-cultural-understanding"/);
-  assert.match(html, /Things with a pulse/);
-  assert.match(html, /Off-screen/);
-  assert.match(html, /Hi, I/);
+  assert.match(html, /Things with/);
+  assert.match(html, /a pulse/);
+  assert.match(html, /The Inner Constellation/);
+  assert.match(html, /Founder\. Builder/);
   assert.match(html, /mailto:leah@machinepulse\.ai/);
   assert.match(html, /linkedin\.com\/in\/leah-wang-8676903a8/);
   assert.match(html, /property="og:image"/);
@@ -58,7 +60,7 @@ test("exports a script-free GitHub Pages artifact", async () => {
   assert.match(html, /href="\/_next\/static\/css\//);
   assert.doesNotMatch(html, /<script\b/i);
   assert.doesNotMatch(html, /Authing|Nepal|Western China/i);
-  assert.match(css, /--sans:\s*"Times New Roman", Times, serif/);
+  assert.match(css, /--body:\s*"Times New Roman", Times, serif/);
   await access(new URL("../github-pages/.nojekyll", import.meta.url));
   await access(new URL("../github-pages/notes/cross-cultural-understanding/index.html", import.meta.url));
   await access(new URL("../github-pages/og-cross-cultural.png", import.meta.url));

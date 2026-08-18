@@ -28,8 +28,8 @@ function ArticleHeader() {
   return (
     <header className="article-site-header shell">
       <a className="brand" href="/" aria-label="Leah’s Log home">
-        <span className="brand-mark">L/</span>
-        <span>Leah&apos;s Log</span>
+        <span className="brand-mark">L</span>
+        <span>MACHINEPULSE / FOUNDER&apos;S LOG</span>
       </a>
       <nav aria-label="Article navigation">
         <a href="/#writing">Notes</a>
@@ -302,17 +302,17 @@ export default function CrossCulturalUnderstanding() {
       </div>
 
       <section className="article-next shell">
-        <p>MORE SIGNAL SOON</p>
+        <p>NEXT TRANSMISSION PENDING</p>
         <h2>One note down.<br />The next one is already moving.</h2>
         <a href="/">Back to Leah&apos;s Log <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer className="footer shell article-footer">
-        <div className="footer-title">Stay curious. Stay loud.</div>
+        <div className="footer-title">The universe is unfinished.<br /><em>Good.</em></div>
         <div className="footer-bottom">
           <span>© 2026 Leah</span>
           <span>Shanghai · Singapore · New York</span>
-          <a href="#top">Back to top ↑</a>
+          <a href="#top">Return to orbit ↑</a>
         </div>
       </footer>
     </main>
