@@ -33,7 +33,7 @@ jobs:
 
       - name: Install and build
         run: |
-          npm ci
+          npm install --no-audit --no-fund
           npm run build
           npm run export:github-pages
         env:
