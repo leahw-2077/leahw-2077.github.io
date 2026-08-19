@@ -35,6 +35,8 @@ An AI product deployed in the real world is not merely an agent system. It is al
 5. **Update surface**: the model, prompt, memory, tools, router, workflow, and UX;
 6. **Evaluation loop**: the mechanism that determines whether a change produced real progress or merely improved a metric.
 
+![The product learning system: tasks become trajectories and signals that update the model, harness, and product.](/product-learning-loop.png)
+
 The product learning system: real tasks become trajectories and signals inside the product environment, which then update the model, harness, and product
 
 Traditional software products also collect feedback, analyze logs, and run A/B tests. Calling every product iteration reinforcement learning would therefore be imprecise. This essay uses the broader term **reinforcement loop**: a system acts in an environment, observes the outcome, and modifies the policy on which its next action will depend.
@@ -169,6 +171,8 @@ Harness updates are usually faster than changing weights and easier to roll back
 
 A product update changes more than the experience. It also changes the signals that will be available in the future. A memory product without a correction interface loses its most important source of supervision. An agent product that reveals only the final answer and hides the trajectory makes it difficult for both users and builders to determine where a failure occurred.
 
+![The model, harness, and product as distinct update surfaces for the same user feedback.](/update-surfaces.png)
+
 The same user feedback may imply a model, harness, or product update; the deciding factors are the full trajectory and root-cause attribution
 
 Product design is therefore environment design. The interface determines whether a human can express reward. The tool interface defines the agent's action space. Permissions and confirmations define the safe boundary of exploration. Logs and artifacts determine whether a failure can become material for the next learning cycle.
@@ -200,6 +204,8 @@ Vertical performance can be approximated as:
 P_domain(t) ≈ P_base + ∫₀^t Q_signal(u) · R_update(u)  du
 
 The frontier lab's advantage is a higher *P_base*. The product-native lab's advantage is higher-quality, more reality-grounded signal and a faster, longer-running update loop.
+
+![A conceptual comparison between a generic frontier model and a vertical system that compounds feedback.](/vertical-learning-frontier.png)
 
 Conceptual illustration: a generic frontier model starts ahead, while a vertical system compounds feedback and may establish a domain-specific frontier
 

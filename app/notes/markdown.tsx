@@ -45,7 +45,7 @@ function renderInline(value: string, keyRoot: string): ReactNode[] {
 }
 
 function isBlockStart(line: string) {
-  return /^(#{1,2} |---$|\| |- |\d+\. )/.test(line);
+  return /^(#{1,2} |---$|!\[|\| |- |\d+\. )/.test(line);
 }
 
 function paragraphClass(value: string, isFirst: boolean) {
@@ -91,6 +91,17 @@ export function MarkdownArticle({ markdown }: { markdown: string }) {
 
     if (line.trim() === "---") {
       blocks.push(<hr key={`block-${key++}`} />);
+      index += 1;
+      continue;
+    }
+
+    const image = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (image) {
+      blocks.push(
+        <figure className="article-figure" key={`block-${key++}`}>
+          <img src={image[2]} alt={image[1]} loading="lazy" />
+        </figure>,
+      );
       index += 1;
       continue;
     }

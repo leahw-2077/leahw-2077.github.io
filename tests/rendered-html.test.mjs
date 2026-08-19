@@ -71,6 +71,9 @@ test("server-renders the product lab essay", async () => {
   assert.match(html, /From Product Company to Neo Lab/);
   assert.match(html, /Artificial Analysis/);
   assert.match(html, /26 min read/i);
+  assert.match(html, /src="\/product-learning-loop\.png"/);
+  assert.match(html, /src="\/update-surfaces\.png"/);
+  assert.match(html, /src="\/vertical-learning-frontier\.png"/);
 });
 
 test("exports a script-free GitHub Pages artifact", async () => {
@@ -87,5 +90,8 @@ test("exports a script-free GitHub Pages artifact", async () => {
   await access(new URL("../github-pages/notes/cross-cultural-understanding/index.html", import.meta.url));
   await access(new URL("../github-pages/notes/the-product-is-the-lab/index.html", import.meta.url));
   await access(new URL("../github-pages/og-cross-cultural.png", import.meta.url));
+  await access(new URL("../github-pages/product-learning-loop.png", import.meta.url));
+  await access(new URL("../github-pages/update-surfaces.png", import.meta.url));
+  await access(new URL("../github-pages/vertical-learning-frontier.png", import.meta.url));
   await access(new URL("../.github/workflows/pages.yml", import.meta.url));
 });
