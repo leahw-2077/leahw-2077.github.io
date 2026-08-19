@@ -96,7 +96,6 @@ export default function Home() {
           <div className="hero-visual" />
           <div className="hero-grain" />
           <span className="sky-note sky-note-one">UNMAPPED / 31°N</span>
-          <span className="sky-note sky-note-two">KEEP GOING →</span>
         </div>
 
         <div className="eyebrow"><span /> LEAH WANG · PERSONAL TRANSMISSION</div>

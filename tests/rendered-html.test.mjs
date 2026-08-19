@@ -38,6 +38,7 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /property="og:image"/);
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /companion/i);
+  assert.doesNotMatch(html, /KEEP GOING/i);
   assert.doesNotMatch(html, /[\u3400-\u9fff]/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });

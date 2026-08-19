@@ -158,7 +158,6 @@ nav a:hover { color: var(--starlight); }
 }
 .sky-note { position: absolute; color: rgba(248,242,223,.5); font-size: 9px; letter-spacing: .18em; }
 .sky-note-one { right: 38%; top: 390px; transform: rotate(-12deg); }
-.sky-note-two { right: 8%; top: 190px; }
 .eyebrow, .section-label, .small-caps, .footer-kicker {
   font-size: 10px;
   font-weight: 700;
