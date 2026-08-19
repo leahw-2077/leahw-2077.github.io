@@ -310,9 +310,9 @@ export default function CrossCulturalUnderstanding() {
       </div>
 
       <section className="article-next shell">
-        <p>NEXT TRANSMISSION PENDING</p>
-        <h2>One note down.<br />The next one is already moving.</h2>
-        <a href="/">Back to Leah&apos;s Log <span aria-hidden="true">↗</span></a>
+        <p>NEXT TRANSMISSION</p>
+        <h2>The Product<br />Is the Lab.</h2>
+        <a href="/notes/the-product-is-the-lab">Read Field Note 02 <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer className="footer shell article-footer">

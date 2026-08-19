@@ -15,6 +15,10 @@ const routes = [
     pathname: "/notes/cross-cultural-understanding",
     destination: "notes/cross-cultural-understanding/index.html",
   },
+  {
+    pathname: "/notes/the-product-is-the-lab",
+    destination: "notes/the-product-is-the-lab/index.html",
+  },
 ];
 
 async function render(pathname) {

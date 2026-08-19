@@ -25,6 +25,8 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /MACHINEPULSE \/ FOUNDER/);
   assert.match(html, /Cross-Cultural Understanding Is Not Magic/);
   assert.match(html, /href="\/notes\/cross-cultural-understanding"/);
+  assert.match(html, /The Product Is the Lab/);
+  assert.match(html, /href="\/notes\/the-product-is-the-lab"/);
   assert.match(html, /Things with/);
   assert.match(html, /a pulse/);
   assert.match(html, /href="https:\/\/www\.machinepulse\.ai\/"/);
@@ -57,6 +59,20 @@ test("server-renders the first full article", async () => {
   assert.doesNotMatch(html, /Karpo|Alice|Slack|Telegram|TGIF|relocat/i);
 });
 
+test("server-renders the product lab essay", async () => {
+  const response = await render("/notes/the-product-is-the-lab");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /The Product Is the Lab/);
+  assert.match(html, /From Agent Systems to Learning Systems/);
+  assert.match(html, /Open Weights, Closed Loops/);
+  assert.match(html, /Case Study: Karpo as a Living Environment/);
+  assert.match(html, /From Product Company to Neo Lab/);
+  assert.match(html, /Artificial Analysis/);
+  assert.match(html, /26 min read/i);
+});
+
 test("exports a script-free GitHub Pages artifact", async () => {
   const [html, css] = await Promise.all([
     readFile(new URL("../github-pages/index.html", import.meta.url), "utf8"),
@@ -69,6 +85,7 @@ test("exports a script-free GitHub Pages artifact", async () => {
   assert.match(css, /--body:\s*"Times New Roman", Times, serif/);
   await access(new URL("../github-pages/.nojekyll", import.meta.url));
   await access(new URL("../github-pages/notes/cross-cultural-understanding/index.html", import.meta.url));
+  await access(new URL("../github-pages/notes/the-product-is-the-lab/index.html", import.meta.url));
   await access(new URL("../github-pages/og-cross-cultural.png", import.meta.url));
   await access(new URL("../.github/workflows/pages.yml", import.meta.url));
 });

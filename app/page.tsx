@@ -8,12 +8,23 @@ const site = {
 
 const posts = [
   {
+    label: "TRANSMISSION 002",
+    title: "The Product Is the Lab",
+    summary:
+      "Open weights, closed loops, and why the product-native companies that learn fastest will define the frontier of a domain.",
+    tags: ["AI Systems", "Product Research"],
+    minutes: 26,
+    date: "19 · 08 · 26",
+    href: "/notes/the-product-is-the-lab",
+  },
+  {
     label: "TRANSMISSION 001",
     title: "Cross-Cultural Understanding Is Not Magic — It’s Science",
     summary:
       "Cultural fluency is not an innate gift. It is a disciplined practice of immersion, annotation, and learning from mistakes.",
     tags: ["Culture", "Global Products"],
     minutes: 6,
+    date: "18 · 08 · 26",
     href: "/notes/cross-cultural-understanding",
   },
 ];
@@ -147,7 +158,7 @@ export default function Home() {
           <div className="featured-meta">
             <span className="signal-dot" />
             <span>{posts[0].label}</span>
-            <span>18 · 08 · 26</span>
+            <span>{posts[0].date}</span>
           </div>
           <div className="featured-content">
             <h3>{posts[0].title}</h3>
@@ -162,7 +173,15 @@ export default function Home() {
           <span className="post-arrow" aria-hidden="true">↗</span>
         </a>
 
-        <p className="archive-note">The first signal has left Earth. More soon.</p>
+        <div className="post-archive" aria-label="Earlier transmissions">
+          {posts.slice(1).map((post) => (
+            <a className="archive-post" href={post.href} key={post.href}>
+              <span>{post.label} · {post.date}</span>
+              <strong>{post.title}</strong>
+              <span aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="projects shell" id="projects">
