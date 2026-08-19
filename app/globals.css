@@ -512,15 +512,18 @@ nav a:hover { color: var(--starlight); }
 .article-prose ol { margin: 8px 0 38px; padding: 0; list-style: none; counter-reset: article-list; border-top: 1px solid var(--line-light); }
 .article-prose ol li { counter-increment: article-list; }
 .article-prose ol li::before { content: counter(article-list, decimal-leading-zero); top: 21px; color: #40588f; font-size: 10px; font-weight: 700; letter-spacing: .08em; }
-.longform-prose > h2 { scroll-margin-top: 34px; margin-top: 112px; }
+.longform-prose { font-size: 18px; line-height: 1.76; }
+.longform-prose .article-lede { font-size: 23px; line-height: 1.62; }
+.longform-prose > h2 { scroll-margin-top: 34px; margin-top: 92px; font-size: clamp(40px, 4.2vw, 54px); line-height: 1.06; }
 .longform-prose > h2:first-child { margin-top: 0; }
 .article-prose h3 { scroll-margin-top: 34px; margin: 72px 0 28px; font-family: var(--serif); font-size: clamp(30px, 3.2vw, 42px); font-weight: 400; line-height: 1.08; letter-spacing: -.032em; }
-.longform-prose hr { height: 1px; margin: 76px 0; border: 0; background: linear-gradient(90deg, transparent, var(--line-light), transparent); }
+.longform-prose h3 { margin: 60px 0 22px; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.12; }
+.longform-prose hr { height: 1px; margin: 64px 0; border: 0; background: linear-gradient(90deg, transparent, var(--line-light), transparent); }
 .article-thesis { margin: 58px -56px !important; padding: 38px 50px 40px; border-left: 5px solid var(--ember); background: var(--paper-deep); font-family: var(--serif); font-size: clamp(25px, 3vw, 35px); font-style: italic; line-height: 1.32; }
-.article-equation { margin: 34px 0 !important; padding: 24px 28px; overflow-x: auto; border: 1px solid rgba(64,88,143,.24); background: rgba(64,88,143,.07); color: #26395e; font-family: Georgia, "Times New Roman", serif; font-size: 21px; white-space: nowrap; }
-.article-figure { margin: 58px -96px 0; overflow: hidden; border: 1px solid rgba(64,88,143,.2); background: #f7f6f2; box-shadow: 0 24px 70px rgba(28,35,56,.12); }
+.article-equation { margin: 28px 0 !important; padding: 20px 22px; overflow-x: auto; border: 1px solid rgba(64,88,143,.22); background: rgba(64,88,143,.06); color: #26395e; font-family: Georgia, "Times New Roman", serif; font-size: 18px; white-space: nowrap; }
+.article-figure { margin: 48px -72px 0; overflow: hidden; border: 1px solid rgba(64,88,143,.18); background: #f7f6f2; box-shadow: 0 18px 54px rgba(28,35,56,.1); }
 .article-figure img { display: block; width: 100%; height: auto; }
-.article-caption { margin: 20px 0 42px !important; padding: 19px 22px; border-left: 3px solid #7189ce; background: rgba(113,137,206,.08); color: #68616a; font-size: 13px; font-style: italic; line-height: 1.65; }
+.article-caption { margin: 13px 0 46px !important; padding: 0 4px; color: #777077; font-size: 12.5px; font-style: italic; line-height: 1.55; }
 .article-prose a { color: #40588f; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .article-table-wrap { max-width: calc(100vw - 40px); margin: 46px -72px 54px; overflow-x: auto; border: 1px solid var(--line-light); background: rgba(255,255,255,.2); }
 .article-table-wrap table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 14px; line-height: 1.55; }
@@ -531,6 +534,9 @@ nav a:hover { color: var(--starlight); }
 .longform-index { gap: 9px; font-size: 11px; }
 .article-end { margin-top: 90px; padding-top: 42px; border-top: 1px solid var(--line-light); }
 .article-signoff { font-family: var(--serif); font-size: 31px; font-style: italic; }
+.production-note { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line-light); color: #777077; font-size: 13px; line-height: 1.65; }
+.production-note span { display: block; margin-bottom: 8px; color: #40588f; font-size: 9px; font-style: normal; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.production-note p { margin: 0; }
 .source-note { margin-top: 44px !important; color: #777077; font-size: 13px; line-height: 1.7; }
 .article-next { padding-top: 105px; padding-bottom: 112px; background: #17192a; color: var(--starlight); }
 .article-next > p { margin: 0 0 42px; color: var(--ember); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
@@ -602,11 +608,13 @@ nav a:hover { color: var(--starlight); }
   .article-lede { font-size: 23px; }
   .article-prose section { margin-top: 80px; }
   .pull-quote { margin: 48px -20px !important; padding: 36px 28px 38px; border-left-width: 5px; }
-  .longform-prose > h2 { margin-top: 82px; }
-  .article-prose h3 { margin-top: 58px; }
+  .longform-prose { font-size: 17px; line-height: 1.72; }
+  .longform-prose .article-lede { font-size: 21px; }
+  .longform-prose > h2 { margin-top: 74px; font-size: clamp(37px, 11vw, 48px); }
+  .longform-prose h3 { margin-top: 52px; font-size: clamp(27px, 8vw, 33px); }
   .article-thesis { margin: 44px -20px !important; padding: 31px 27px 34px; }
-  .article-equation { margin-left: -8px !important; margin-right: -8px !important; padding: 20px; font-size: 18px; }
-  .article-figure { margin: 38px -20px 0; box-shadow: 0 16px 44px rgba(28,35,56,.1); }
+  .article-equation { margin-left: -8px !important; margin-right: -8px !important; padding: 18px; font-size: 17px; }
+  .article-figure { margin: 34px -20px 0; box-shadow: 0 14px 38px rgba(28,35,56,.09); }
   .article-table-wrap { margin: 36px -20px 44px; }
   .article-next { padding-top: 76px; padding-bottom: 82px; }
 }

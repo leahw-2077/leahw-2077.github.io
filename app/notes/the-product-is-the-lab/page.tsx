@@ -86,6 +86,10 @@ export default function TheProductIsTheLab() {
           <MarkdownArticle markdown={articleMarkdown} />
           <footer className="article-end">
             <p className="article-signoff">— Leah</p>
+            <aside className="production-note" aria-label="Production note">
+              <span>Production note</span>
+              <p>Words and ideas by Leah. Typesetting, diagram design, and web production by Codex.</p>
+            </aside>
           </footer>
         </article>
       </div>

@@ -74,6 +74,8 @@ test("server-renders the product lab essay", async () => {
   assert.match(html, /src="\/product-learning-loop\.png"/);
   assert.match(html, /src="\/update-surfaces\.png"/);
   assert.match(html, /src="\/vertical-learning-frontier\.png"/);
+  assert.match(html, /Production note/);
+  assert.match(html, /Typesetting, diagram design, and web production by Codex/);
 });
 
 test("exports a script-free GitHub Pages artifact", async () => {
