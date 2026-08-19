@@ -3,6 +3,7 @@ const site = {
   email: "leah@machinepulse.ai",
   linkedin: "https://linkedin.com/in/leah-wang-8676903a8",
   machinepulse: "https://www.machinepulse.ai/",
+  karpo: "https://app.karpo.ai/",
 };
 
 const posts = [
@@ -24,6 +25,8 @@ const projects = [
     description:
       "A company exploring how frontier intelligence can become part of a more vivid, connected human life.",
     status: "In orbit",
+    href: site.machinepulse,
+    external: true,
   },
   {
     number: "02",
@@ -31,6 +34,8 @@ const projects = [
     description:
       "A proactive AI companion for discovering places, experiencing cities, and finding the people worth sharing them with.",
     status: "Building",
+    href: site.karpo,
+    external: true,
   },
   {
     number: "03",
@@ -38,6 +43,8 @@ const projects = [
     description:
       "Stories from the frontier of models, culture, consumer behavior, and the beautifully strange work of starting from zero.",
     status: "Transmitting",
+    href: "#writing",
+    external: false,
   },
 ];
 
@@ -167,7 +174,14 @@ export default function Home() {
         </div>
         <div className="project-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.name}>
+            <a
+              className="project-card"
+              href={project.href}
+              key={project.name}
+              target={project.external ? "_blank" : undefined}
+              rel={project.external ? "noreferrer" : undefined}
+              aria-label={`${project.name}${project.external ? " (opens in a new tab)" : ""}`}
+            >
               <div className="project-topline">
                 <span>{project.number}</span>
                 <span className="project-status">{project.status}</span>
@@ -177,7 +191,7 @@ export default function Home() {
                 <p>{project.description}</p>
               </div>
               <span className="project-arrow"><Arrow /></span>
-            </article>
+            </a>
           ))}
         </div>
       </section>

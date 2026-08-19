@@ -27,6 +27,9 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /href="\/notes\/cross-cultural-understanding"/);
   assert.match(html, /Things with/);
   assert.match(html, /a pulse/);
+  assert.match(html, /href="https:\/\/www\.machinepulse\.ai\/"/);
+  assert.match(html, /href="https:\/\/app\.karpo\.ai\/"/);
+  assert.match(html, /href="#writing"/);
   assert.match(html, /The Inner Constellation/);
   assert.match(html, /Founder\. Builder/);
   assert.match(html, /mailto:leah@machinepulse\.ai/);
