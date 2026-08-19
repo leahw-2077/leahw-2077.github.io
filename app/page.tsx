@@ -32,7 +32,7 @@ const projects = [
     number: "02",
     name: "Karpo",
     description:
-      "A proactive AI companion for discovering places, experiencing cities, and finding the people worth sharing them with.",
+      "A proactive AI for discovering places, experiencing cities, and finding the people worth sharing them with.",
     status: "Building",
     href: site.karpo,
     external: true,
@@ -227,7 +227,7 @@ export default function Home() {
           </p>
           <p>
             I&apos;m the founder and CEO of MachinePulse, building Karpo—a proactive
-            AI companion for real-world experiences. Before that, I worked
+            AI for real-world experiences. Before that, I worked
             across model strategy and consumer products at ByteDance / Doubao
             and Kuaishou.
           </p>
