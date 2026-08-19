@@ -144,17 +144,6 @@ nav a:hover { color: var(--starlight); }
     0 0 0 170px rgba(184,116,82,.022),
     inset 0 0 90px rgba(142,172,255,.035);
 }
-.hero-visual::after {
-  content: "";
-  position: absolute;
-  right: 22%;
-  top: 27%;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #e6d2c1 0 3%, #8f654f 18%, #151927 56%, transparent 59%);
-  box-shadow: -7px -2px 17px rgba(184,116,82,.2);
-}
 .hero-grain {
   position: absolute;
   inset: 0;
@@ -491,7 +480,6 @@ nav a:hover { color: var(--starlight); }
   .text-link { display: inline-block; margin-top: 27px; }
   .hero-visual { inset: 0; width: 100%; opacity: .96; }
   .hero-visual::before { right: -430px; bottom: -270px; width: 720px; height: 720px; }
-  .hero-visual::after { right: 13%; top: 24%; width: 27px; height: 27px; }
   .hero-sky::before { background: linear-gradient(180deg, #05070d 0%, rgba(5,7,13,.86) 22%, rgba(5,7,13,.18) 52%, rgba(5,7,13,.92) 100%); }
   .sky-note { display: none; }
   .manifesto { grid-template-columns: 1fr; gap: 34px; padding-top: 90px; padding-bottom: 94px; }
