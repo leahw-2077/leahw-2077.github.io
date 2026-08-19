@@ -1,6 +1,6 @@
 const site = {
   name: "Leah",
-  email: "leah@machinepulse.ai",
+  email: "Leah@MachinePulse.ai",
   linkedin: "https://linkedin.com/in/leah-wang-8676903a8",
   machinepulse: "https://www.machinepulse.ai/",
   karpo: "https://app.karpo.ai/",
@@ -244,7 +244,7 @@ export default function Home() {
               LinkedIn <Arrow />
             </a>
             <a className="button button-outline" href={`mailto:${site.email}`}>
-              Send a signal <Arrow />
+              {site.email} <Arrow />
             </a>
           </div>
         </div>

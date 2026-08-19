@@ -32,7 +32,8 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /href="#writing"/);
   assert.match(html, /The Inner Constellation/);
   assert.match(html, /Founder\. Builder/);
-  assert.match(html, /mailto:leah@machinepulse\.ai/);
+  assert.match(html, /href="mailto:Leah@MachinePulse\.ai"/);
+  assert.match(html, />Leah@MachinePulse\.ai/);
   assert.match(html, /linkedin\.com\/in\/leah-wang-8676903a8/);
   assert.match(html, /property="og:image"/);
   assert.match(html, /\/og\.png/);
