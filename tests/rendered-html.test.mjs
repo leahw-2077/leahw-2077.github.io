@@ -32,7 +32,7 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /href="https:\/\/www\.machinepulse\.ai\/"/);
   assert.match(html, /href="https:\/\/app\.karpo\.ai\/"/);
   assert.match(html, /href="#writing"/);
-  assert.match(html, /The Inner Constellation/);
+  assert.doesNotMatch(html, /The Inner Constellation|Beyond the product|the universe expands|href="#off-screen"/i);
   assert.match(html, /Founder\. Builder/);
   assert.match(html, /href="mailto:Leah@MachinePulse\.ai"/);
   assert.match(html, />Leah@MachinePulse\.ai/);

@@ -59,29 +59,6 @@ const projects = [
   },
 ];
 
-const constellations = [
-  {
-    number: "A",
-    title: "Science fiction & stories",
-    line: "Other worlds are often the best instruments for seeing this one clearly.",
-  },
-  {
-    number: "B",
-    title: "Rock & roll",
-    line: "Loud guitars, long tracks, and Pink Floyd forever somewhere in the signal.",
-  },
-  {
-    number: "C",
-    title: "Long trails",
-    line: "Open horizons, earned silence, and the smallness that makes everything feel possible again.",
-  },
-  {
-    number: "D",
-    title: "Photography",
-    line: "A practice of light, texture, memory—and actually paying attention.",
-  },
-];
-
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -97,7 +74,6 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#writing">Notes</a>
           <a href="#projects">Building</a>
-          <a href="#off-screen">Elsewhere</a>
           <a href="#about">About</a>
         </nav>
       </header>
@@ -214,28 +190,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="off-screen shell" id="off-screen">
-        <div className="off-screen-intro">
-          <p className="section-label">03 / The Inner Constellation</p>
-          <h2>Beyond the product,<br /><em>the universe expands.</em></h2>
-          <p>Everything that keeps the machinery human.</p>
-        </div>
-        <div className="constellation-map">
-          <div className="constellation-line" aria-hidden="true" />
-          {constellations.map((item) => (
-            <article className="constellation-card" key={item.title}>
-              <div className="constellation-star" aria-hidden="true" />
-              <span>{item.number}</span>
-              <h3>{item.title}</h3>
-              <p>{item.line}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="about shell" id="about">
         <div>
-          <p className="section-label">04 / Origin Story</p>
+          <p className="section-label">03 / Origin Story</p>
           <h2>Founder. Builder.<br /><em>Earthling, for now.</em></h2>
         </div>
         <div className="about-copy">
