@@ -27,6 +27,8 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /href="\/notes\/cross-cultural-understanding"/);
   assert.match(html, /The Product Is the Lab/);
   assert.match(html, /href="\/notes\/the-product-is-the-lab"/);
+  assert.match(html, /When We Talk About Intelligence/);
+  assert.match(html, /href="\/notes\/when-we-talk-about-intelligence"/);
   assert.match(html, /Things with/);
   assert.match(html, /a pulse/);
   assert.match(html, /href="https:\/\/www\.machinepulse\.ai\/"/);
@@ -78,6 +80,24 @@ test("server-renders the product lab essay", async () => {
   assert.match(html, /Typesetting, diagram design, and web production by Codex/);
 });
 
+test("server-renders the intelligence essay", async () => {
+  const response = await render("/notes/when-we-talk-about-intelligence");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /When We Talk About Intelligence/);
+  assert.match(html, /Intelligence Before Language/);
+  assert.match(html, /Emotion as a Value System/);
+  assert.match(html, /LLMs do not necessarily lead to AGI/);
+  assert.match(html, /A New Kind of Tool/);
+  assert.match(html, /Generalization Is Still the Open Question/);
+  assert.match(html, /Language Is Not the Whole of Intelligence/);
+  assert.match(html, /Max Bennett/);
+  assert.match(html, /Ilya Sutskever/);
+  assert.match(html, /og-intelligence\.png/);
+  assert.match(html, /English translation, typesetting, and web production by Codex/);
+});
+
 test("exports a script-free GitHub Pages artifact", async () => {
   const [html, css] = await Promise.all([
     readFile(new URL("../github-pages/index.html", import.meta.url), "utf8"),
@@ -91,7 +111,9 @@ test("exports a script-free GitHub Pages artifact", async () => {
   await access(new URL("../github-pages/.nojekyll", import.meta.url));
   await access(new URL("../github-pages/notes/cross-cultural-understanding/index.html", import.meta.url));
   await access(new URL("../github-pages/notes/the-product-is-the-lab/index.html", import.meta.url));
+  await access(new URL("../github-pages/notes/when-we-talk-about-intelligence/index.html", import.meta.url));
   await access(new URL("../github-pages/og-cross-cultural.png", import.meta.url));
+  await access(new URL("../github-pages/og-intelligence.png", import.meta.url));
   await access(new URL("../github-pages/product-learning-loop.png", import.meta.url));
   await access(new URL("../github-pages/update-surfaces.png", import.meta.url));
   await access(new URL("../github-pages/vertical-learning-frontier.png", import.meta.url));

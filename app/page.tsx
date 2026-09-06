@@ -8,6 +8,16 @@ const site = {
 
 const posts = [
   {
+    label: "TRANSMISSION 003",
+    title: "When We Talk About Intelligence",
+    summary:
+      "Language is only one part of intelligence. Emotion, value, experience, and action may matter just as much.",
+    tags: ["Intelligence", "LLMs & AGI"],
+    minutes: 9,
+    date: "06 · 09 · 26",
+    href: "/notes/when-we-talk-about-intelligence",
+  },
+  {
     label: "TRANSMISSION 002",
     title: "The Product Is the Lab",
     summary:

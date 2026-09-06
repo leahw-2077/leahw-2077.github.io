@@ -12,6 +12,10 @@ const basePath = (process.env.PAGES_BASE_PATH ?? "").replace(/\/$/, "");
 const routes = [
   { pathname: "/", destination: "index.html" },
   {
+    pathname: "/notes/when-we-talk-about-intelligence",
+    destination: "notes/when-we-talk-about-intelligence/index.html",
+  },
+  {
     pathname: "/notes/cross-cultural-understanding",
     destination: "notes/cross-cultural-understanding/index.html",
   },
