@@ -8,6 +8,16 @@ const site = {
 
 const posts = [
   {
+    label: "TRANSMISSION 004",
+    title: "Could Jev Be AI’s ‘Bilaterian Moment’?",
+    summary:
+      "A thought about early animals, the ability to steer, and what changes when AI can make small decisions inside real products.",
+    tags: ["Jev", "Intelligence"],
+    minutes: 4,
+    date: "22 · 09 · 26",
+    href: "/notes/jev-bilaterian-moment",
+  },
+  {
     label: "TRANSMISSION 003",
     title: "When We Talk About Intelligence",
     summary:

@@ -29,6 +29,8 @@ test("server-renders the finished blog", async () => {
   assert.match(html, /href="\/notes\/the-product-is-the-lab"/);
   assert.match(html, /When We Talk About Intelligence/);
   assert.match(html, /href="\/notes\/when-we-talk-about-intelligence"/);
+  assert.match(html, /Could Jev Be AI’s ‘Bilaterian Moment’\?/);
+  assert.match(html, /href="\/notes\/jev-bilaterian-moment"/);
   assert.match(html, /Things with/);
   assert.match(html, /a pulse/);
   assert.match(html, /href="https:\/\/www\.machinepulse\.ai\/"/);
@@ -98,6 +100,22 @@ test("server-renders the intelligence essay", async () => {
   assert.match(html, /English translation, typesetting, and web production by Codex/);
 });
 
+test("server-renders the Jev and bilaterian essay", async () => {
+  const response = await render("/notes/jev-bilaterian-moment");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Could Jev Be AI’s ‘Bilaterian Moment’\?/);
+  assert.match(html, /The turn/);
+  assert.match(html, /What we built with Jev/);
+  assert.match(html, /Where the analogy stops/);
+  assert.match(html, /1,253/);
+  assert.match(html, /4\.13 to 2\.88 seconds/);
+  assert.match(html, /2\.77 to 1\.24 seconds/);
+  assert.match(html, /taste\.karpo\.ai/);
+  assert.match(html, /jev-bilaterian-cover\.png/);
+});
+
 test("exports a script-free GitHub Pages artifact", async () => {
   const [html, css] = await Promise.all([
     readFile(new URL("../github-pages/index.html", import.meta.url), "utf8"),
@@ -112,8 +130,10 @@ test("exports a script-free GitHub Pages artifact", async () => {
   await access(new URL("../github-pages/notes/cross-cultural-understanding/index.html", import.meta.url));
   await access(new URL("../github-pages/notes/the-product-is-the-lab/index.html", import.meta.url));
   await access(new URL("../github-pages/notes/when-we-talk-about-intelligence/index.html", import.meta.url));
+  await access(new URL("../github-pages/notes/jev-bilaterian-moment/index.html", import.meta.url));
   await access(new URL("../github-pages/og-cross-cultural.png", import.meta.url));
   await access(new URL("../github-pages/og-intelligence.png", import.meta.url));
+  await access(new URL("../github-pages/jev-bilaterian-cover.png", import.meta.url));
   await access(new URL("../github-pages/product-learning-loop.png", import.meta.url));
   await access(new URL("../github-pages/update-surfaces.png", import.meta.url));
   await access(new URL("../github-pages/vertical-learning-frontier.png", import.meta.url));
